@@ -1,0 +1,7 @@
+/.cache
+/.config
+/.ipython
+/.ipynb_checkpoints
+/.jupyter
+/.local
+.bash_history

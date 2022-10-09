@@ -1,18 +1,14 @@
+from configparser import MAX_INTERPOLATION_DEPTH
 import time
 import random
+from xmlrpc.client import MAXINT
 
 def initListWithRandomNumbers():
-    n = 1000000
+    n = 1000
     rand_list=[0]*n
     for i in range(n):
         rand_list[i] = random.randint(0,999)
     return rand_list
-    
-def calcSumm(arr):
-    summ = 0
-    for val in arr:
-        summ = summ + val
-    return summ
     
 def calcHist(tdata):
     hist = [0]*10
@@ -28,12 +24,12 @@ def TimeScore():
     return end - start
     
 t = 100
-minT = 0
+minT = MAXINT
 maxT = 0
 sumT = 0
 for i in range(t):
     res = TimeScore()
     sumT += res
     if res < minT: minT = res 
-    if res > maxT: maxT = res 
-print(minT, maxT, sumT)
+    if res > maxT: maxT = res
+print(minT, maxT, sumT / t)

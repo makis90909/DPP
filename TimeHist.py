@@ -4,7 +4,7 @@ import random
 from xmlrpc.client import MAXINT
 
 def initListWithRandomNumbers():
-    n = 1000
+    n = 1000000
     rand_list=[0]*n
     for i in range(n):
         rand_list[i] = random.randint(0,999)
@@ -32,4 +32,6 @@ for i in range(t):
     sumT += res
     if res < minT: minT = res 
     if res > maxT: maxT = res
-print(minT, maxT, sumT / t)
+print("Минимальное время работы ", minT)
+print("Максимальное время работы ", maxT)
+print("Среднее время работы ", sumT / t)

@@ -4,7 +4,7 @@ import random
 from xmlrpc.client import MAXINT
 
 def initListWithRandomNumbers():
-    n = 1000000
+    n = 1000
     rand_list=[0]*n
     for i in range(n):
         rand_list[i] = random.randint(0,999)

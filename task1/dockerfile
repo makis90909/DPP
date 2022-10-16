@@ -1,0 +1,9 @@
+FROM python
+
+WORKDIR /task1/
+
+COPY . .
+
+RUN chmod +x /task1/TimeHist.py
+
+CMD python /task1/TimeHist.py

@@ -1,0 +1,9 @@
+FROM python
+
+WORKDIR /task2/
+
+COPY . .
+
+#RUN chmod 777 /task2/
+
+CMD python /task2/HistDist.py

@@ -1,0 +1,9 @@
+FROM python
+
+WORKDIR /task3/
+
+COPY . .
+
+#RUN chmod 777 /task2/
+
+CMD python /task3/typeIdent.py

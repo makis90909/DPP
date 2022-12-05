@@ -4,8 +4,8 @@ WORKDIR /task4
 
 COPY . .
 
-#RUN apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
-RUN apt update
+RUN apt-get update
 RUN apt install -y mosquitto mosquitto-clients
+RUN pip install paho-mqtt
 
 CMD mosquitto -v & python ./TopWR.py

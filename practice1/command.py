@@ -57,17 +57,17 @@ def send_cmd(cmd_params):
     print(string)
     os.system(f'C:/Progs/mosquitto/mosquitto_pub -t {topic} -m "' + string + '"')
 
+if __name__ == "__main__":
+    args = sys.argv
+    ip = args[1]
+    port = args[2]
+    topic = args[3]
+    a_s = float(args[4])
+    m_s = float(args[5])
 
-args = sys.argv
-ip = args[1]
-port = args[2]
-topic = args[3]
-a_s = float(args[4])
-m_s = float(args[5])
+    ##os.system(f"C:/Progs/mosquitto/mosquitto -v -d -p {port}")
+    #time.sleep(5)
 
-##os.system(f"C:/Progs/mosquitto/mosquitto -v -d -p {port}")
-#time.sleep(5)
-
-arr = read_file(path)
-params = calcul(arr)
-send_cmd(params)
+    arr = read_file(path)
+    params = calcul(arr)
+    send_cmd(params)

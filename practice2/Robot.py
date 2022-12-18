@@ -73,15 +73,15 @@ class RobotModel(APP):
         s = json.loads(data)
         
         if (s["cmd"] == "stop"):
-            bot1.end()
+            self.end()
         if (s["cmd"] == "forward"):
-            bot1.forward(float(s["val"]))
+            self.forward(float(s["val"]))
         if (s["cmd"] == "backward"):
-            bot1.backward(float(s["val"]))
+            self.backward(float(s["val"]))
         if (s["cmd"] == "left"):
-            bot1.left(float(s["val"]))
+            self.left(float(s["val"]))
         if (s["cmd"] == "right"):
-            bot1.right(float(s["val"]))
+            self.right(float(s["val"]))
         
         self.print_params(RobotModel.path)
 
